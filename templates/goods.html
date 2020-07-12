@@ -1,0 +1,114 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>海鲜水产-商品列表</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/main.css">
+</head>
+<body>
+	<div class="search_bar clearfix">
+		<a href="/index/" class="logo fl"><img src="/static/images/logo.png"></a>
+		<div class="guest_cart fr">
+			<a href="/cart/show_cart/" class="cart_name fl">我的购物车</a>
+			<div class="goods_count fl">0</div>
+
+			<ul class="cart_goods_show">
+
+                {% for cart_goods in cart_goods_list %}
+                    <li>
+					    <img src="/static/goods/15180585503614001.jpg" alt="商品图片">
+                            {{ cart_goods.goods_name }}
+					    <div>{{ cart_goods.goods_num }}</div>
+				    </li>
+                {% endfor %}
+
+			</ul>
+
+		</div>
+	</div>
+
+	<div class="navbar_con">
+		<div class="navbar clearfix">
+			<div class="subnav_con fl">
+				<h1>全部商品分类</h1>	
+				<span></span>			
+				<ul class="subnav">
+
+                    {% for cag in categories %}
+                        <li><a href="/goods/?cag={{ cag.id }}&amp;page=1" class="{{ cag.cag_css }}">{{ cag.cag_name }}</a></li>
+                    {% endfor %}
+                    
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="breadcrumb">
+		<a href="#">当前分类:</a>
+		<span></span>
+		<a href="#">{{ current_cag.cag_name }}</a>
+	</div>
+
+	<div class="main_wrap clearfix">
+
+		<div class="sort_bar"></div>
+
+		<ul class="goods_type_list clearfix">
+
+            {% for goods in page_date %}
+                <li>
+				<a href="detail/?id={{ goods.id }}"><img src="/static/goods/{{ goods.goods_img }}.jpg"></a>
+				<div class="operate">
+					<h4><a href="/detail/?id={{ goods.id }}">{{ goods.goods_name }}</a></h4>
+					<span class="prize">￥{{ goods.goods_price }}</span>
+				</div>
+			</li>
+            {% endfor %}
+
+		</ul>
+
+		<div class="pagenation">
+
+            {% if page_date.has_previous %}
+                <a href="?cag={{ cag_id }}&amp;page={{ page_date.previous_page_number }}">上一页</a>
+            {% endif %}
+
+            {% for index in paginator.page_range %}
+                {% if page_date.number == index %}
+                    <a href="?cag={{ cag_id }}&amp;page={{ index }}" class="active">{{ index }}</a>
+                {% else %}
+                    <a href="?cag={{ cag_id }}&amp;page={{ index }}">{{ index }}</a>
+                {% endif %}
+            {% endfor %}
+
+            {% if categories %}
+                <a href="?cag={{ cag_id }}&amp;page={{ page_date.next_page_number }}">下一页&gt;</a>
+            {% endif %}
+
+{#			<a href="?cag=2&amp;page=5">上一页</a>#}
+{##}
+{#            {% for index in paginator.page_range %}#}
+{#                <a href="?cag={{ cag_id }}&amp;page={{ index }}">{{ index }}</a>#}
+{#            {% endfor %}#}
+{#                #}
+{#			<a href="">下一页&gt;</a>#}
+            
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="foot_link">
+			<a href="#">关于我们</a>
+			<span>|</span>
+			<a href="#">联系我们</a>
+			<span>|</span>
+			<a href="#">招聘人才</a>
+			<span>|</span>
+			<a href="#">友情链接</a>		
+		</div>
+		<p>CopyRight © 2016 北京天天生鲜信息技术有限公司 All Rights Reserved</p>
+		<p>电话：010-****888    京ICP备*******8号</p>
+	</div>
+	
+
+</body>
+</html>
