@@ -80,16 +80,11 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         # 数据库配置信息
-        # 'NAME': 'ttsx',
-        # 'HOST': 'localhost',
-        # 'PORT': '3306',
-        # 'USER': 'root',
-        # 'PASSWORD': '985317ytyyl',
         'NAME': 'ttsx',
-        'HOST': '47.100.100.94',
+        'HOST': 'localhost',
         'PORT': '3306',
         'USER': 'root',
-        'PASSWORD': '985317',
+        'PASSWORD': '123456',
     }
 }
 
