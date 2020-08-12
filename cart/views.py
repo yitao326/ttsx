@@ -94,7 +94,7 @@ def submit_order(request):
 
     order_info.save()
 
-    response = redirect('cart/submit_success/?id=%s' % order_info.order_id)
+    response = redirect('/cart/submit_success/?id=%s' % order_info.order_id)
 
     for goods_id, goods_num in request.COOKIES.items():
         if not goods_id.isdigit():
