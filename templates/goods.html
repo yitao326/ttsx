@@ -56,7 +56,7 @@
 
             {% for goods in page_date %}
                 <li>
-				<a href="detail/?id={{ goods.id }}"><img src="/static/goods/{{ goods.goods_img }}.jpg"></a>
+				<a href="/detail/?id={{ goods.id }}"><img src="/static/goods/{{ goods.goods_img }}.jpg"></a>
 				<div class="operate">
 					<h4><a href="/detail/?id={{ goods.id }}">{{ goods.goods_name }}</a></h4>
 					<span class="prize">￥{{ goods.goods_price }}</span>
