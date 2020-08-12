@@ -96,6 +96,7 @@ def goods(request):
 
 
     categories = GoodsCategory.objects.all()
+
     cart_goods_list = []
     cart_goods_count = 0
     for goods_id,goods_num in request.COOKIES.items():
