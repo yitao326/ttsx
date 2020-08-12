@@ -32,5 +32,5 @@ urlpatterns = [
     url(r'^cart/submit_order/$', submit_order),  # 提交订单功能
     url(r'^cart/submit_success/$', submit_success),  # 提交订单成功页面
     url(r'^testcsrf/$', testcsrf),  # csrf详解
-    url(r'^test$', test),  # csrf详解
+    url(r'^test$', test),  # 打印日志
 ]
