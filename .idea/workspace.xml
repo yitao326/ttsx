@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b0b22d64-7647-44d4-8c33-1c17f0838280" name="默认更改列表" comment="">
       <change beforePath="$PROJECT_DIR$/ttsx/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ttsx/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ttsx/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ttsx/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +35,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="1493" />
-          <entry key="Python" value="6473" />
+          <entry key="Python" value="6474" />
         </counts>
       </usages-collector>
     </session>
@@ -62,8 +61,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ttsx/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="375">
+              <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -558,8 +557,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ttsx/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="375">
+          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
         </state>
       </provider>
     </entry>
