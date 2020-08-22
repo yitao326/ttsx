@@ -23,7 +23,7 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     # 参1是要访问的url地址的正则匹配  参2是要访问的视图的函数名字
     url(r'^index/$', index),  # 首页
-    url(r'^detail/$', detail),  # 详情页
-    url(r'^cart/add_cart/$', add_cart),  # 添加到购物车
+    # url(r'^detail/$', detail),  # 详情页
+    # url(r'^cart/add_cart/$', add_cart),  # 添加到购物车
     url(r'^goods/$', goods),  # 商品分类页面
 ]
